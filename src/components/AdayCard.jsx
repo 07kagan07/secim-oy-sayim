@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 
+// eslint-disable-next-line react/prop-types
 const AdayCard = ({name,img}) => {
     const [vote, setVote] = useState(0)
 
@@ -40,7 +41,8 @@ const AdayCard = ({name,img}) => {
         <div className="card-body">
             <h5 className="card-title text-center">{name}</h5>
             <div className='text-center'>
-                <button  className={`${name} btn btn-primary w-100 my-5`} onClick={addVote}>Oy Ekle</button>
+                <button  className={`${name} btn btn-primary my-5`} onClick={addVote}>Oy Ekle</button>
+                <br />
                 <button  className="btn btn-danger opacity-75 " onClick={removeVote}>Oy Düşür</button>
             </div>
         </div>
